@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: nginx 
+    # ports:
+    #   - "8080:80"
+    image: nginx
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    name: proxy-net
+    external: true
