@@ -1,0 +1,13 @@
+
+services:
+  app:
+    container_name: &name grcp-server
+    build: .
+    image: *name
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    name: proxy-net
+    external: true
